@@ -2,7 +2,7 @@
 <html lang="ar">
 <head>
 <meta charset="UTF-8">
-<title>Atyaa Cars Pro</title>
+<title>Atyaa Cars</title>
 
 <style>
 body{
@@ -13,27 +13,20 @@ background:#0b0f1a;
 color:#e5e7eb;
 }
 
-/* أنيميشن خفيف */
-@keyframes fadeIn {
-from {opacity:0; transform:translateY(10px);}
-to {opacity:1; transform:translateY(0);}
-}
-
 header{
 background:#111827;
 padding:20px;
 text-align:center;
 border-bottom:3px solid #ef4444;
-animation: fadeIn 1s ease-in-out;
 }
 
 .hero{
-background:linear-gradient(90deg,#111827,#1e3a8a);
-padding:30px;
+background:#1e3a8a;
+padding:25px;
 text-align:center;
 font-size:20px;
 font-weight:bold;
-animation: fadeIn 1.2s ease-in-out;
+color:white;
 }
 
 .container{
@@ -46,22 +39,16 @@ padding:15px;
 margin:15px 0;
 border-radius:12px;
 border:1px solid #1e3a8a;
-box-shadow:0 0 10px rgba(0,0,0,0.5);
-animation: fadeIn 1.3s ease-in-out;
 }
 
 h2,h3{
 color:#3b82f6;
 }
 
-input{
-width:90%;
-padding:10px;
-margin:5px 0;
-border-radius:6px;
-border:1px solid #3b82f6;
-background:#0b0f1a;
-color:white;
+img{
+width:100%;
+border-radius:10px;
+margin-top:10px;
 }
 
 button{
@@ -74,20 +61,14 @@ color:white;
 margin-top:5px;
 }
 
-button:hover{
-background:#dc2626;
-}
-
-/* صور السيارات */
-.gallery{
-display:grid;
-grid-template-columns:repeat(2,1fr);
-gap:10px;
-}
-
-img{
-width:100%;
-border-radius:10px;
+input{
+width:90%;
+padding:10px;
+margin:5px 0;
+border-radius:6px;
+border:1px solid #3b82f6;
+background:#0b0f1a;
+color:white;
 }
 
 a{
@@ -99,7 +80,6 @@ footer{
 text-align:center;
 padding:15px;
 color:#9ca3af;
-margin-top:20px;
 }
 </style>
 
@@ -109,16 +89,16 @@ margin-top:20px;
 
 <header>
 <h1>🚗 Atyaa Cars</h1>
-<p>منصة السيارات الذكية الاحترافية</p>
+<p>منصة السيارات الذكية</p>
 </header>
 
 <div class="hero">
-🖤 أسود | 🔵 أزرق | 🔴 أحمر — تجربة احترافية
+موقع سيارات احترافي 🔥
 </div>
 
 <div class="container">
 
-<!-- تسجيل دخول -->
+<!-- تسجيل -->
 <div class="card">
 <h2>🔐 تسجيل دخول</h2>
 <input type="text" placeholder="الاسم">
@@ -127,28 +107,26 @@ margin-top:20px;
 <button onclick="alert('تم الدخول (تجريبي)')">دخول</button>
 </div>
 
-<!-- صور سيارات -->
+<!-- صور سيارات (مضمونة) -->
 <div class="card">
 <h2>🚗 سيارات مميزة</h2>
-<div class="gallery">
-<img src="https://source.unsplash.com/400x300/?car">
-<img src="https://source.unsplash.com/401x300/?car">
-<img src="https://source.unsplash.com/402x300/?car">
-<img src="https://source.unsplash.com/403x300/?car">
-</div>
+
+<img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70">
+<img src="https://images.unsplash.com/photo-1549921296-3a6b8b0f0b69">
+<img src="https://images.unsplash.com/photo-1502877338535-766e1452684a">
 </div>
 
-<!-- 10 أقسام -->
-<div class="card"><h3>🛞 المحرك</h3><p>فحص أداء الموتور</p></div>
-<div class="card"><h3>⚙️ ناقل الحركة</h3><p>الفتيس</p></div>
-<div class="card"><h3>🧱 الشاسيه</h3><p>كشف الحوادث</p></div>
-<div class="card"><h3>🎨 الهيكل</h3><p>الدهان</p></div>
-<div class="card"><h3>🛋️ الداخلية</h3><p>الكابينة</p></div>
-<div class="card"><h3>🔌 الكهرباء</h3><p>النظام الكهربائي</p></div>
-<div class="card"><h3>⛽ الوقود</h3><p>الاستهلاك</p></div>
-<div class="card"><h3>🛠️ الصيانة</h3><p>التكلفة</p></div>
-<div class="card"><h3>📊 التقييم</h3><p>تقييم شامل</p></div>
-<div class="card"><h3>🚗 السوق</h3><p>الأكثر مبيعاً</p></div>
+<!-- أقسام -->
+<div class="card"><h3>🛞 المحرك</h3></div>
+<div class="card"><h3>⚙️ ناقل الحركة</h3></div>
+<div class="card"><h3>🧱 الشاسيه</h3></div>
+<div class="card"><h3>🎨 الهيكل</h3></div>
+<div class="card"><h3>🛋️ الداخلية</h3></div>
+<div class="card"><h3>🔌 الكهرباء</h3></div>
+<div class="card"><h3>⛽ الوقود</h3></div>
+<div class="card"><h3>🛠️ الصيانة</h3></div>
+<div class="card"><h3>📊 التقييم</h3></div>
+<div class="card"><h3>🚗 السوق</h3></div>
 
 <!-- تواصل -->
 <div class="card">
@@ -164,7 +142,7 @@ margin-top:20px;
 </div>
 
 <footer>
-© Atyaa Cars - All Rights Reserved
+© Atyaa Cars
 </footer>
 
 </body>
