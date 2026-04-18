@@ -2,33 +2,38 @@
 <html lang="ar">
 <head>
 <meta charset="UTF-8">
-<title>Atyaa - عربيتك في جيبك</title>
+<title>Atyaa Cars Pro</title>
 
 <style>
 body{
 margin:0;
 font-family:Arial;
 direction:rtl;
-background:#0f172a;
+background:#0b0f1a;
 color:#e5e7eb;
+}
+
+/* أنيميشن خفيف */
+@keyframes fadeIn {
+from {opacity:0; transform:translateY(10px);}
+to {opacity:1; transform:translateY(0);}
 }
 
 header{
 background:#111827;
 padding:20px;
 text-align:center;
+border-bottom:3px solid #ef4444;
+animation: fadeIn 1s ease-in-out;
 }
 
 .hero{
-background:url('https://images.unsplash.com/photo-1492144534655-ae79c964c9d7') center/cover;
-height:300px;
-display:flex;
-align-items:center;
-justify-content:center;
-color:white;
-font-size:28px;
+background:linear-gradient(90deg,#111827,#1e3a8a);
+padding:30px;
+text-align:center;
+font-size:20px;
 font-weight:bold;
-text-shadow:0 0 10px black;
+animation: fadeIn 1.2s ease-in-out;
 }
 
 .container{
@@ -36,11 +41,27 @@ padding:20px;
 }
 
 .card{
-background:#1f2937;
-margin:15px 0;
+background:#111827;
 padding:15px;
+margin:15px 0;
 border-radius:12px;
-box-shadow:0 0 10px rgba(0,0,0,0.4);
+border:1px solid #1e3a8a;
+box-shadow:0 0 10px rgba(0,0,0,0.5);
+animation: fadeIn 1.3s ease-in-out;
+}
+
+h2,h3{
+color:#3b82f6;
+}
+
+input{
+width:90%;
+padding:10px;
+margin:5px 0;
+border-radius:6px;
+border:1px solid #3b82f6;
+background:#0b0f1a;
+color:white;
 }
 
 button{
@@ -48,25 +69,36 @@ padding:10px;
 border:none;
 border-radius:6px;
 cursor:pointer;
+background:#ef4444;
+color:white;
 margin-top:5px;
 }
 
-.whatsapp{background:#25D366;color:white;}
-.email{background:#3b82f6;color:white;}
-.login{background:#f59e0b;color:black;}
+button:hover{
+background:#dc2626;
+}
 
-input,select{
-width:90%;
-padding:10px;
-margin:5px 0;
-border-radius:5px;
-border:none;
+/* صور السيارات */
+.gallery{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:10px;
+}
+
+img{
+width:100%;
+border-radius:10px;
+}
+
+a{
+color:#3b82f6;
+text-decoration:none;
 }
 
 footer{
 text-align:center;
-padding:20px;
-background:#111827;
+padding:15px;
+color:#9ca3af;
 margin-top:20px;
 }
 </style>
@@ -76,257 +108,64 @@ margin-top:20px;
 <body>
 
 <header>
-<h1>🚗 Atyaa</h1>
-<p>عربيتك في جيبك - عالم السيارات الذكي</p>
+<h1>🚗 Atyaa Cars</h1>
+<p>منصة السيارات الذكية الاحترافية</p>
 </header>
 
 <div class="hero">
-ملك السيارات من بين الركام 🐆🚗
+🖤 أسود | 🔵 أزرق | 🔴 أحمر — تجربة احترافية
 </div>
 
 <div class="container">
 
-<!-- تسجيل الدخول -->
+<!-- تسجيل دخول -->
 <div class="card">
-<h2>🔐 تسجيل الدخول (شكلي)</h2>
+<h2>🔐 تسجيل دخول</h2>
 <input type="text" placeholder="الاسم">
 <input type="email" placeholder="الإيميل">
 <input type="text" placeholder="رقم الهاتف">
-<button class="login">دخول</button>
+<button onclick="alert('تم الدخول (تجريبي)')">دخول</button>
 </div>
 
-<!-- اختيار اللغة -->
+<!-- صور سيارات -->
 <div class="card">
-<h2>🌍 اللغة</h2>
-<select>
-<option>العربية</option>
-<option>English</option>
-<option>Français</option>
-</select>
+<h2>🚗 سيارات مميزة</h2>
+<div class="gallery">
+<img src="https://source.unsplash.com/400x300/?car">
+<img src="https://source.unsplash.com/401x300/?car">
+<img src="https://source.unsplash.com/402x300/?car">
+<img src="https://source.unsplash.com/403x300/?car">
+</div>
 </div>
 
-<!-- 10 أقسام سيارات -->
-<div class="card"><h2>🛞 نظام المحرك</h2><p>فحص الموتور وأداؤه</p></div>
-<div class="card"><h2>⚙️ ناقل الحركة</h2><p>الفتيس والأداء</p></div>
-<div class="card"><h2>🧱 الشاسيه</h2><p>كشف الحوادث واللحام</p></div>
-<div class="card"><h2>🎨 الهيكل الخارجي</h2><p>الدهان والخدوش</p></div>
-<div class="card"><h2>🛋️ الداخل</h2><p>المقاعد والتجهيزات</p></div>
-<div class="card"><h2>🔌 الكهرباء</h2><p>الإضاءة والنظام الكهربائي</p></div>
-<div class="card"><h2>⛽ استهلاك الوقود</h2><p>مدى الكفاءة</p></div>
-<div class="card"><h2>🛠️ الصيانة</h2><p>تكلفة الإصلاح</p></div>
-<div class="card"><h2>📊 تقييم السيارة</h2><p>تقييم شامل قبل الشراء</p></div>
-<div class="card"><h2>🚗 السيارات الأكثر مبيعاً</h2><p>أفضل الاختيارات في السوق</p></div>
+<!-- 10 أقسام -->
+<div class="card"><h3>🛞 المحرك</h3><p>فحص أداء الموتور</p></div>
+<div class="card"><h3>⚙️ ناقل الحركة</h3><p>الفتيس</p></div>
+<div class="card"><h3>🧱 الشاسيه</h3><p>كشف الحوادث</p></div>
+<div class="card"><h3>🎨 الهيكل</h3><p>الدهان</p></div>
+<div class="card"><h3>🛋️ الداخلية</h3><p>الكابينة</p></div>
+<div class="card"><h3>🔌 الكهرباء</h3><p>النظام الكهربائي</p></div>
+<div class="card"><h3>⛽ الوقود</h3><p>الاستهلاك</p></div>
+<div class="card"><h3>🛠️ الصيانة</h3><p>التكلفة</p></div>
+<div class="card"><h3>📊 التقييم</h3><p>تقييم شامل</p></div>
+<div class="card"><h3>🚗 السوق</h3><p>الأكثر مبيعاً</p></div>
 
 <!-- تواصل -->
 <div class="card">
 <h2>📞 تواصل معنا</h2>
 
-<a href="https://wa.me/201222426921">
-<button class="whatsapp">واتساب</button>
-</a>
+<p>📱 واتساب:</p>
+<a href="https://wa.me/201222426921">اضغط هنا</a>
 
-<br><br>
-
-<a href="mailto:atyaa660@gmail.com">
-<button class="email">إرسال إيميل</button>
-</a>
+<p>📧 إيميل:</p>
+<a href="mailto:atyaa660@gmail.com">إرسال إيميل</a>
 </div>
 
 </div>
 
 <footer>
-<p>🔗 رابط النشر والترويج للأعضاء: soon...</p>
-<p>© Atyaa - All Rights Reserved</p>
+© Atyaa Cars - All Rights Reserved
 </footer>
-
-</body>
-</html>git add .
-git commit -m "home page update"
-git push<!DOCTYPE html>
-<html lang="ar">
-<head>
-<meta charset="UTF-8">
-<title>عربيتك في جيبك</title>
-
-<style>
-body{
-margin:0;
-font-family:Arial;
-direction:rtl;
-background:#f5f6fa;
-}
-
-header{
-background:#111827;
-color:white;
-padding:20px;
-text-align:center;
-}
-
-.hero{
-background:url('https://images.unsplash.com/photo-1503376780353-7e6692767b70') center/cover;
-height:250px;
-display:flex;
-align-items:center;
-justify-content:center;
-color:white;
-font-size:24px;
-font-weight:bold;
-}
-
-.container{
-padding:20px;
-}
-
-.card{
-background:white;
-padding:15px;
-margin:15px 0;
-border-radius:10px;
-box-shadow:0 2px 10px rgba(0,0,0,0.1);
-}
-
-input{
-padding:10px;
-width:80%;
-margin-top:10px;
-}
-
-button{
-padding:10px 15px;
-background:#111827;
-color:white;
-border:none;
-border-radius:5px;
-cursor:pointer;
-}
-
-button:hover{
-background:#374151;
-}
-</style>
-
-</head>
-
-<body>
-
-<header>
-<h1>🚗 عربيتك في جيبك</h1>
-<p>دليلك لشراء وفحص وتعديل السيارات</p>
-</header>
-
-<div class="hero">
-موقع السيارات الذكي 🔥
-</div>
-
-<div class="container">
-
-<div class="card">
-<h2>🔐 تسجيل دخول (تجريبي)</h2>
-<p>ادخل بياناتك لبدء التجربة</p>
-<input type="email" placeholder="الإيميل">
-<br>
-<input type="password" placeholder="كلمة المرور">
-<br><br>
-<button>دخول</button>
-</div>
-
-<div class="card">
-<h2>🛒 شراء سيارة</h2>
-<p>اختار عربية مستعملة أو جديدة بأمان</p>
-</div>
-
-<div class="card">
-<h2>🔍 فحص السيارات</h2>
-<p>اعرف العيوب قبل ما تشتري</p>
-</div>
-
-<div class="card">
-<h2>💰 توفير المصاريف</h2>
-<p>نصائح لتقليل تكلفة العربية</p>
-</div>
-
-<div class="card">
-<h2>📧 اشترك معنا</h2>
-<p>استقبل نصائح يومية على الإيميل</p>
-<input type="email" placeholder="اكتب إيميلك">
-<br><br>
-<button>اشتراك</button>
-</div>
-
-</div>
-
-</body>
-</html><!DOCTYPE html>
-<html lang="ar">
-<head>
-<meta charset="UTF-8">
-<title>عربيتك في جيبك</title>
-</head>
-
-<body style="font-family:Arial; text-align:center; direction:rtl; background:#f5f5f5;">
-
-<h1>🚗 عربيتك في جيبك</h1>
-<p>دليلك لشراء وفحص وتوفير وصيانة عربيتك بنفسك</p>
-
-<hr>
-
-<h2>🛒 ازاي تشتري عربية مستعملة</h2>
-<p>
-✔️ حدد ميزانيتك الأول<br>
-✔️ اختار نوع معروف وسهل صيانته<br>
-✔️ متشتريش أول عربية تشوفها<br>
-✔️ قارن الأسعار في السوق
-</p>
-
-<hr>
-
-<h2>🔍 ازاي تطلع عيوب العربية</h2>
-<p>
-✔️ بص على الدهان (لو في اختلاف يبقى حادثة)<br>
-✔️ اسمع صوت الموتور كويس<br>
-✔️ جرّب العربية في الطريق<br>
-✔️ شوف الشاسيه فيه لحامات ولا لأ
-</p>
-
-<hr>
-
-<h2>📊 ازاي تقيم العربية</h2>
-<p>
-✔️ سنة الصنع<br>
-✔️ عدد الكيلومترات<br>
-✔️ الحالة العامة<br>
-✔️ مقارنة بالسوق
-</p>
-
-<hr>
-
-<h2>💰 ازاي توفر في المصاريف</h2>
-<p>
-✔️ صيانة دورية منتظمة<br>
-✔️ متغيرش قطع غير ضرورية<br>
-✔️ استخدم بنزين مناسب<br>
-✔️ راقب استهلاك العربية
-</p>
-
-<hr>
-
-<h2>🎨 ازاي تعدل شكل العربية</h2>
-<p>
-✔️ تركيب جنوط جديدة<br>
-✔️ تغيير الإضاءة<br>
-✔️ تنظيف وتلميع<br>
-✔️ إضافات بسيطة بتفرق في الشكل
-</p>
-
-<hr>
-
-<h3>📧 سجل إيميلك</h3>
-<p>سيب إيميلك وهنتواصل معاك بنصائح مهمة</p>
-
-<input type="email" placeholder="اكتب إيميلك هنا">
-<br><br>
-<button>إرسال</button>
 
 </body>
 </html>
